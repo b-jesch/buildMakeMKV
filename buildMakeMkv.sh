@@ -11,7 +11,7 @@ else
     mkdir $HOME/.MakeMKV
 fi
 
-if [ -e $HOME/.MakeMKV/$curr_version ]; then
+if [ -e $HOME/.MakeMKV/$curr_version ] && [ "$1" != "--force" ]; then
     echo "makemkv is up to date, no new version needed"
     exit 0
 fi
