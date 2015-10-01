@@ -22,8 +22,9 @@ echo "Getting new key: $key"
 echo "Generate new key file"
 
 export keyfile=$HOME/.MakeMKV/settings.conf
+
 echo "app_Key=\"$key\"" > $keyfile
-if [ "$1" == "--keyonly" ]; then
+if [ "$2" = "--keyonly" ]; then
     exit 0
 fi
 
