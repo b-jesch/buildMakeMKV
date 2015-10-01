@@ -9,6 +9,6 @@ If you wish to overwrite/reinstall an acual version of makemkv, use option --for
 
 ./buildMakeMkv.sh --force
 
-If you want to generate a new keyfile only use options --force --keyonly
+If you want to generate a new keyfile only use options --force --keyonly:
 
 ./buildMakeMkv.sh --force --keyonly
