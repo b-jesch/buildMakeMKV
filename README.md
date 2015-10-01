@@ -8,3 +8,7 @@ against the libmmbd of makemkv for better compatibility of BluRay ripping.
 If you wish to overwrite/reinstall an acual version of makemkv, use option --force:
 
 ./buildMakeMkv.sh --force
+
+If you want to generate a new keyfile only use options --force --keyonly
+
+./buildMakeMkv.sh --force --keyonly
