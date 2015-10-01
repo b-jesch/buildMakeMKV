@@ -16,9 +16,6 @@ if [ -e $HOME/.MakeMKV/$curr_version ] && [ "$1" != "--force" ]; then
     exit 0
 fi
 
-
-sudo apt-get install checkinstall build-essential libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev libqt4-dev g++ pkgconf
-
 wget "http://www.makemkv.com/forum2/viewtopic.php?f=5&t=1053"
 key=`grep -Po '(?<=<div class="codecontent">).*?(?=<\/div>)' viewtopic.php\?f\=5\&t\=1053`
 echo "Getting new key: $key"
@@ -26,6 +23,11 @@ echo "Generate new key file"
 
 export keyfile=$HOME/.MakeMKV/settings.conf
 echo "app_Key=\"$key\"" > $keyfile
+if [ "$1" == "--keyonly" ]; then
+    exit 0
+fi
+
+sudo apt-get install checkinstall build-essential libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev libqt4-dev g++ pkgconf
 
 export bin_zip=makemkv-bin-${curr_version}.tar.gz
 export oss_zip=makemkv-oss-${curr_version}.tar.gz
