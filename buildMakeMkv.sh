@@ -41,6 +41,9 @@ wget http://www.makemkv.com/download/$oss_zip
 tar -xzvf $bin_zip
 tar -xzvf $oss_zip
 
+mkdir -p $bin_folder/tmp
+echo "accepted" > $bin_folder/tmp/eula_accepted
+
 cd $oss_folder
 ./configure -q
 make -j`nproc` -s
