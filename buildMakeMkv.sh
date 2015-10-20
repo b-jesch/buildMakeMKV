@@ -2,6 +2,12 @@
 
 cd /tmp/
 wget "http://www.makemkv.com/download/"
+
+if [ $? != 0 ]; then
+    echo "Makemkv webserver not responding, giving up..."
+    exit 1
+fi
+
 export curr_version=$(grep -m 1 "MakeMKV v" index.html | sed -e "s/.*MakeMKV v//;s/ (.*//")
 
 echo "Scraped the MakeMKV download page and found the latest version as" ${curr_version}
