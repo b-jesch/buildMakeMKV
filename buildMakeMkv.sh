@@ -23,7 +23,7 @@ if [ -e $HOME/.MakeMKV/$curr_version ] && [ "$1" != "--force" ]; then
 fi
 
 wget "http://www.makemkv.com/forum2/viewtopic.php?f=5&t=1053"
-key=`grep -Po '(?<=<div class="codecontent">).*?(?=<\/div>)' viewtopic.php\?f\=5\&t\=1053`
+key=`grep -Po '(?<=<code>).*?(?=<\/code>)' viewtopic.php\?f\=5\&t\=1053`
 echo "Getting new key: $key"
 echo "Generate new key file"
 
