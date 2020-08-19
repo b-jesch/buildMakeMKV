@@ -34,7 +34,7 @@ if [ "$2" = "--keyonly" ]; then
     exit 0
 fi
 
-sudo apt-get install checkinstall build-essential libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev libqt4-dev g++ pkgconf
+sudo apt-get install build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qtbase5-dev zlib1g-dev
 
 export bin_zip=makemkv-bin-${curr_version}.tar.gz
 export oss_zip=makemkv-oss-${curr_version}.tar.gz
